@@ -1,0 +1,15 @@
+.navigation{
+  background-color: black !important;
+  overflow: hidden;
+}
+
+.item{
+  color: white !important;
+  font-size: large;
+  padding-top: 20px !important;
+}
+
+.item:hover{
+    background-color: grey !important;
+  text-decoration: underline !important;
+}

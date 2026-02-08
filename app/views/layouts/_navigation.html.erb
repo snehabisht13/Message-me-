@@ -1,0 +1,30 @@
+<div class="ui secondary menu navigation">
+       <div class="ui container">
+        <a class="item" href="/">
+          Chatroom
+        </a>
+        <a class="item" href="/messages">
+          Messages
+        </a>
+        
+        <div class="right menu">
+        <% if curr_user %>
+          <div class="item">
+            Welcome, <%= curr_user&.username || "Guest" %>!
+            </div>
+          <a class="ui item" href="/logout">
+            Logout
+          </a>
+
+          <% else %>
+          <a class="ui item" href="/login">
+            LogIn
+          </a>
+          <a class="ui item" href="/profiles/new">
+            SignUp
+          </a>
+           <%end%>
+        </div>
+
+      </div>
+      </div>
