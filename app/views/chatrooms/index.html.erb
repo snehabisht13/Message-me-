@@ -9,47 +9,22 @@
 <div class="content">
 
 <div class="ui feed">
+<% @chatrooms.each do |c|%>
    <div class="event">
     <div class="content">
       <div class="summary">
-        <a>Joe Henderson</a> posted on his page
+        <a><%= c.profile.username%></a> 
         <div class="date">
-          3 days ago
-        </div>
+          <%= c.created_at.strftime("%B %d, %Y at %I:%M %p")%>
+        </div> 
       </div>
       <div class="extra text">
-        Ours is a life of constant reruns. Were always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+        <%= simple_format(c.body) %>
       </div>
     </div>
   </div>
+  <%end%>
 
-  <div class="event">
-    <div class="content">
-      <div class="summary">
-        <a>Joe Henderson</a> posted on his page
-        <div class="date">
-          3 days ago
-        </div>
-      </div>
-      <div class="extra text">
-        Ours is a life of constant reruns. Were always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-      </div>
-    </div>
-  </div>
-
-  <div class="event">
-    <div class="content">
-      <div class="summary">
-        <a>Joe Henderson</a> posted on his page
-        <div class="date">
-          3 days ago
-        </div>
-      </div>
-      <div class="extra text">
-        Ours is a life of constant reruns. Were always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-      </div>
-    </div>
-  </div>
   
 </div>
 
