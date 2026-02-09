@@ -3,5 +3,8 @@ class ChatroomsController < ApplicationController
 
     def index
         @chatrooms = Message.all
+        @users = Profile.all
+        @message = Message.new
     end
+
 end

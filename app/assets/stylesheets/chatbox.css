@@ -11,3 +11,18 @@
    margin-left: 25px !important;
 }
 
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  height: 500px; /* Adjust as needed */
+}
+
+#messages-container {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.extra.content {
+  position: relative;
+}
+

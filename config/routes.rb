@@ -11,10 +11,14 @@ Rails.application.routes.draw do
   post '/login',  to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
+  get '/messages', to: 'messages#index'
+  post '/messages', to: 'messages#create'
+
 
   #signup route
   resources :profiles, only: [:new, :create, :index, :show, :edit, :update]
   
+  mount ActionCable.server , at: '/cable'
 
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest

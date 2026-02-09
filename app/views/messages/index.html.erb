@@ -1,0 +1,19 @@
+<h2 class="ui center orange aligned icon header">
+<i class="circular orange chat icon"></i>
+  Messages Send Recently
+</h2>
+
+<div class="messagess-container" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start;">
+  <% @messages.each do |message| %>
+    <div class="ui orange card" style="flex: 1 1 calc(33.33% - 10px);">
+      <div class="content">
+        <div class="header"><%= message.body %></div>
+        <div class="meta">
+          <span><%= message.created_at.strftime("%B %d, %Y at %I:%M %p") %></span>
+        </div>
+        <p></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+

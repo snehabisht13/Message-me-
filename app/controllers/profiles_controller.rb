@@ -8,7 +8,8 @@ class ProfilesController < ApplicationController
       @profile = Profile.new(profile_params)
       if @profile.save
         session[:profile_id] = @profile.id
-        redirect_to root_path, notice: 'Profile was successfully created.'
+        flash[:success] = "Welcome to MessageMe, #{@profile.username}!"
+        redirect_to root_path
       else
         render :new
       end

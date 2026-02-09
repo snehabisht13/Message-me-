@@ -3,7 +3,6 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 
-$(document).on('turbolinks:load', function() {
+document.addEventListener('turbo:load', function() {
   $('.ui.dropdown').dropdown('show');
-}
-);
+});import "channels"
